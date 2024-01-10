@@ -1,0 +1,122 @@
+<!-- views/register.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add any additional styles or links to your CSS files here -->
+  <style>
+    body {
+      background-color: #d0d8de;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .card-title {
+      margin-bottom: 0;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+    .register-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .register-link a {
+      color: #007bff;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+    #center{
+        display: flex;
+        justify-content: center;
+    }
+    #center button{
+        padding: 5px 23px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header text-center">
+          <h4 class="card-title">User Registration</h4>
+        </div>
+        <div class="card-body">
+          <form action="/register" method="post">
+            <div class="form-group">
+              <label for="username">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword"> Password</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div >
+            <div id="center">
+                <button type="submit"  class="btn btn-primary btn-block">Register</button>
+            </div>
+          </form>
+          <div class="register-link">
+            <p>Already have an account? <a href="/login">login</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add any additional scripts or links to your JS files here -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
